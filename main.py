@@ -100,10 +100,10 @@ def main():
     print('Dictionary downloaded!')
 
     disp = int(input('Display Limit? '))
-    petal_letters = input('Outer letters? ')[0]
-    center_letter = input('Center letter? ')[0]
+    petal_letters = (input('Outer letters? '))
+    center_letter = (input('Center letter? '))[0]
     while True:
-        bonus_letter = input('Bonus letter? ')
+        bonus_letter = input('Bonus letter? ')[0]
         print('Searching...')
 
         getSolutions(dictionary, petal_letters, center_letter, bonus_letter, display=disp)
