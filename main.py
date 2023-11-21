@@ -99,13 +99,14 @@ def main():
 
     print('Dictionary downloaded!')
 
-    petal_letters = input('Outer letters? ')
-    center_letter = input('Center letter? ')
+    disp = int(input('Display Limit? '))
+    petal_letters = input('Outer letters? ')[0]
+    center_letter = input('Center letter? ')[0]
     while True:
         bonus_letter = input('Bonus letter? ')
         print('Searching...')
 
-        getSolutions(dictionary, petal_letters, center_letter, bonus_letter)
+        getSolutions(dictionary, petal_letters, center_letter, bonus_letter, display=disp)
 
 if __name__ == '__main__':
     main()
