@@ -78,7 +78,7 @@ def getSolutions(dictionary: str, petals: str, center: str, bonus: str, display:
         exit()
 
     print(f'-- Showing {display}/{len(valid_solutions)} solutions:')
-    for word in valid_solutions[0:display]:
+    for word in valid_solutions[0:min(display, len(valid_solutions))]:
         print(f'{word} ({pointValue(word, petals, bonus)} pts) ', end='')
         best_turns = peakBonusLetter(word, center)
         if bonus not in best_turns:
